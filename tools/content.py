@@ -269,6 +269,8 @@ SERVICES = [
 UI = {
     "en": {
         "lang_name": "English", "lang_code": "EN", "html_lang": "en", "og_locale": "en_US",
+        "home_h1": "Commercial cleaning for Midwest businesses",
+        "about_img_alt": "Cleaning team preparing a commercial space",
         "skip": "Skip to main content",
         "nav_home": "Home", "nav_services": "Services", "nav_about": "About", "nav_contact": "Contact",
         "menu": "Menu", "close": "Close", "all_services": "All services",
@@ -383,6 +385,8 @@ UI = {
     },
     "es": {
         "lang_name": "Español", "lang_code": "ES", "html_lang": "es", "og_locale": "es_US",
+        "home_h1": "Limpieza comercial para empresas del Medio Oeste",
+        "about_img_alt": "Equipo de limpieza preparando un espacio comercial",
         "skip": "Saltar al contenido principal",
         "nav_home": "Inicio", "nav_services": "Servicios", "nav_about": "Nosotros", "nav_contact": "Contacto",
         "menu": "Menú", "close": "Cerrar", "all_services": "Todos los servicios",
