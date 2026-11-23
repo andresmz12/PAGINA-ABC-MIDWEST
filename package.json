@@ -1,0 +1,9 @@
+{
+  "name": "abc-midwest-site",
+  "private": true,
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "validate": "python3 tools/validate.py",
+    "start": "npx --yes serve@14.2.4 public -l ${PORT:-3000}"
+  }
+}

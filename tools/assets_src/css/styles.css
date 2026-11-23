@@ -37,7 +37,7 @@ ul,ol{margin:0;padding:0}
 .logo-mark{width:40px;height:40px;flex:none}
 .logo-text{display:flex;flex-direction:column;line-height:1;font-family:Sora,sans-serif;text-transform:uppercase}
 .logo-text strong{font-size:1.25rem;font-weight:700;letter-spacing:.06em}.logo-text span{font-size:.72rem;font-weight:600;letter-spacing:.32em;color:var(--accent);margin-top:3px}
-.logo-light{color:#fff}.logo-light .logo-text span{color:#F59E5B}
+.logo-light,.logo-light .logo-text strong{color:#fff}.logo-light .logo-text span{color:#F59E5B}
 .burger{order:3;background:none;border:2px solid var(--primary);color:var(--primary);width:44px;height:44px;border-radius:10px;display:grid;place-items:center;cursor:pointer}
 .burger .icon{width:22px;height:22px}.burger .i-close{display:none}
 .burger[aria-expanded=true] .i-open{display:none}.burger[aria-expanded=true] .i-close{display:inline}
