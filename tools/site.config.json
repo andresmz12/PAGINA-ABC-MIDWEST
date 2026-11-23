@@ -1,0 +1,28 @@
+{
+  "_note": "EJEMPLOS EDITABLES: reemplaza todos los datos marcados como ejemplo antes de publicar.",
+  "name": "ABC Midwest Commercial Cleaning",
+  "short_name": "ABC Midwest",
+  "domain": "https://midominio.com",
+  "phone_display": "(555) 010-0199",
+  "phone_e164": "+15550100199",
+  "whatsapp": "15550100199",
+  "email": "hello@midominio.com",
+  "form_endpoint": "https://formspree.io/f/REPLACE_ME",
+  "service_areas": [
+    {"en": "Illinois", "es": "Illinois"},
+    {"en": "Indiana", "es": "Indiana"},
+    {"en": "Michigan", "es": "Míchigan"},
+    {"en": "Ohio", "es": "Ohio"},
+    {"en": "Wisconsin", "es": "Wisconsin"}
+  ],
+  "legal_draft_notice": true,
+  "colors": {
+    "primary": "#0F4C5C",
+    "primary_dark": "#0A2F3A",
+    "accent": "#B8430B",
+    "accent_hover": "#963607",
+    "light": "#F3F6F7",
+    "text": "#1B2A31",
+    "muted": "#52626A"
+  }
+}
