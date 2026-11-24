@@ -9,20 +9,35 @@
   "email": "hello@midominio.com",
   "form_endpoint": "https://formspree.io/f/REPLACE_ME",
   "service_areas": [
-    {"en": "Illinois", "es": "Illinois"},
-    {"en": "Indiana", "es": "Indiana"},
-    {"en": "Michigan", "es": "Míchigan"},
-    {"en": "Ohio", "es": "Ohio"},
-    {"en": "Wisconsin", "es": "Wisconsin"}
+    {
+      "en": "Illinois",
+      "es": "Illinois"
+    },
+    {
+      "en": "Indiana",
+      "es": "Indiana"
+    },
+    {
+      "en": "Michigan",
+      "es": "Míchigan"
+    },
+    {
+      "en": "Ohio",
+      "es": "Ohio"
+    },
+    {
+      "en": "Wisconsin",
+      "es": "Wisconsin"
+    }
   ],
   "legal_draft_notice": true,
   "colors": {
-    "primary": "#0F4C5C",
-    "primary_dark": "#0A2F3A",
-    "accent": "#B8430B",
-    "accent_hover": "#963607",
-    "light": "#F3F6F7",
-    "text": "#1B2A31",
-    "muted": "#52626A"
+    "primary": "#14342B",
+    "primary_dark": "#0E241E",
+    "accent": "#A63D1F",
+    "accent_hover": "#85301A",
+    "light": "#F3F0EA",
+    "text": "#1D2623",
+    "muted": "#55605B"
   }
 }

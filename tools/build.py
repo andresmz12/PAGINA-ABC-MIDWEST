@@ -86,19 +86,9 @@ def optimize_images():
         im.save(out / (src.stem + ".jpg"), "JPEG", quality=76, optimize=True, progressive=True)
 
 
-LOGO_MARK = ('<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-             '<rect width="40" height="40" rx="10" fill="{bg}"/>'
-             '<path d="M10 28 20 10l10 18" fill="none" stroke="{fg}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>'
-             '<path d="M14.5 22h11" stroke="{fg}" stroke-width="3.4" stroke-linecap="round"/>'
-             '<circle cx="31" cy="9" r="2.6" fill="{ac}"/></svg>')
-
-
 def logo_html(light=False):
-    c = CFG["colors"]
-    bg, fg = (("#FFFFFF", c["primary"]) if light else (c["primary"], "#FFFFFF"))
-    mark = LOGO_MARK.format(bg=bg, fg=fg, ac="#F59E5B" if light else c["accent"])
-    cls = "logo logo-light" if light else "logo"
-    return (f'<span class="{cls}-inner">{mark}<span class="logo-text"><strong>ABC</strong><span>Midwest</span></span></span>')
+    cls = "logo-light-inner" if light else "logo-inner"
+    return f'<span class="{cls}"><span class="wm"><b>ABC</b> Midwest</span><span class="wm-sub">Commercial Cleaning</span></span>'
 
 
 def write_static_assets():
@@ -109,9 +99,9 @@ def write_static_assets():
     (a / "css" / "theme.css").write_text(build_theme_css(), encoding="utf-8")
     shutil.copy(TOOLS / "assets_src" / "css" / "styles.css", a / "css" / "styles.css")
     shutil.copy(TOOLS / "assets_src" / "js" / "main.js", a / "js" / "main.js")
-    fav = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="%s"/>'
-           '<path d="M10 28 20 10l10 18M14.5 22h11" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>'
-           '<circle cx="31" cy="9" r="2.6" fill="#F59E5B"/></svg>') % c["primary"]
+    fav = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="6" fill="%s"/>'
+           '<text x="20" y="28" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="24" fill="#fff">A</text>'
+           '<rect x="9" y="33" width="22" height="2.5" fill="%s"/></svg>') % (c["primary"], "#E08A5F")
     (a / "favicon.svg").write_text(fav, encoding="utf-8")
 
 
@@ -242,7 +232,7 @@ def head(lang, key, title, desc, p, alt_paths, ld, sid=None):
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{asset_url('css/theme.css')}">
 <link rel="stylesheet" href="{asset_url('css/styles.css')}">
 {jsonld(ld)}
@@ -361,17 +351,17 @@ def faq_list(items):
 
 
 def service_cards(lang, exclude=None):
-    t = UI[lang]
-    out = []
+    rows = []
+    n = 0
     for s in SERVICES:
         if s["id"] == exclude:
             continue
+        n += 1
         d = s[lang]
-        out.append(f"""<article class="card svc-card reveal">
-<div class="card-img"><img src="/assets/img/{s['img']}.jpg" alt="{esc(d['img_alt'])}" width="1400" height="933" loading="lazy" decoding="async"></div>
-<div class="card-body"><h3><a class="stretched" href="{path('service', lang, s['id'])}">{esc(d['name'])}</a></h3>
-<p>{esc(d['short'])}</p><span class="link-arrow">{esc(t['learn_more'])}{ICON['arrow']}</span></div></article>""")
-    return '<div class="grid grid-svc">' + "".join(out) + "</div>"
+        rows.append(f"""<li class="svc-row reveal"><span class="svc-n">{n:02d}</span>
+<h3><a class="stretched" href="{path('service', lang, s['id'])}">{esc(d['name'])}</a></h3>
+<p>{esc(d['short'])}</p><span class="svc-go" aria-hidden="true">{ICON['arrow']}</span></li>""")
+    return '<ol class="svc-list">' + "".join(rows) + "</ol>"
 
 
 def steps(items):
@@ -473,7 +463,7 @@ def build_service(lang, svc):
 <div class="split-copy reveal"><h2>{esc(d['name'])}</h2>{''.join(f'<p>{esc(x)}</p>' for x in d['summary'])}
 <p><a class="btn btn-primary" href="{path('contact', lang)}?service={sid}">{esc(t['cta_quote'])}</a></p></div>
 <div class="split-img reveal"><img src="/assets/img/{svc['img']}.jpg" alt="{esc(d['img_alt'])}" width="1400" height="933" loading="lazy" decoding="async"></div></div></section>"""
-    cards = "".join(f'<article class="card inc-card reveal"><span class="inc-ico">{ICON["check"]}</span><h3>{esc(a)}</h3><p>{esc(b)}</p></article>'
+    cards = "".join(f'<article class="card inc-card reveal"><h3>{esc(a)}</h3><p>{esc(b)}</p></article>'
                     for a, b in d["includes"])
     body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><h2>{esc(t['includes_title'])}</h2>
 <p class="lead">{esc(t['includes_lead'])}</p></div><div class="grid grid-4">{cards}</div></div></section>"""
@@ -498,7 +488,7 @@ def build_about(lang):
 <div class="split-img reveal"><img src="/assets/img/about.jpg" alt="{esc(t['about_img_alt'])}" width="1100" height="1300" loading="lazy" decoding="async"></div>
 <div class="split-copy reveal">{''.join(f'<p>{esc(x)}</p>' for x in t['about_body'])}
 <h3 class="mini">{esc(t['areas_title'])}</h3><p>{esc(t['areas_lead'])}</p>{areas_list(lang)}</div></div></section>"""
-    vals = "".join(f'<article class="card inc-card reveal"><span class="inc-ico">{ICON["check"]}</span><h3>{esc(a)}</h3><p>{esc(b)}</p></article>' for a, b in t["values"])
+    vals = "".join(f'<article class="card inc-card reveal"><h3>{esc(a)}</h3><p>{esc(b)}</p></article>' for a, b in t["values"])
     body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><h2>{esc(t['values_title'])}</h2></div>
 <div class="grid grid-4">{vals}</div></div></section>""" + cta_banner(lang)
     ld = [business_node(lang), breadcrumb_node([(t["nav_home"], path("home", lang)), (t["nav_about"], path("about", lang))])]

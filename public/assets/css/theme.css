@@ -1,9 +1,9 @@
 :root{
-  --primary:#0F4C5C;
-  --primary-dark:#0A2F3A;
-  --accent:#B8430B;
-  --accent-hover:#963607;
-  --light:#F3F6F7;
-  --text:#1B2A31;
-  --muted:#52626A;
+  --primary:#14342B;
+  --primary-dark:#0E241E;
+  --accent:#A63D1F;
+  --accent-hover:#85301A;
+  --light:#F3F0EA;
+  --text:#1D2623;
+  --muted:#55605B;
 }
