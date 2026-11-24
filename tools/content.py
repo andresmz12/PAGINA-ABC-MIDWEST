@@ -18,7 +18,7 @@ SERVICES = [
             "tagline": "Recurring cleaning for offices and shared workspaces.",
             "meta_title": "Office Cleaning Services in the Midwest | ABC Midwest",
             "meta_desc": "Recurring office cleaning for workplaces across the Midwest. Custom scope, flexible schedules and a written quote within 1 business day.",
-            "img_alt": "Clean, bright open-plan office with desks and daylight",
+            "img_alt": "Bright office with a long work table, plants and large windows",
             "summary": [
                 "Office cleaning keeps shared spaces, workstations and restrooms in order so your team can focus on work. We build a checklist around how your space is actually used, then repeat it on a schedule you choose.",
                 "Every plan starts with a conversation about your layout, hours and priorities. The scope, frequency and price are written in your quote, so there are no surprises."
@@ -41,7 +41,7 @@ SERVICES = [
             "tagline": "Limpieza recurrente para oficinas y espacios de trabajo compartidos.",
             "meta_title": "Limpieza de oficinas en el Medio Oeste | ABC Midwest",
             "meta_desc": "Limpieza recurrente de oficinas en el Medio Oeste. Alcance a medida, horarios flexibles y cotización por escrito en 1 día hábil.",
-            "img_alt": "Oficina abierta, limpia y luminosa con escritorios y luz natural",
+            "img_alt": "Oficina luminosa con una mesa larga, plantas y ventanales",
             "summary": [
                 "La limpieza de oficinas mantiene en orden las áreas comunes, los puestos de trabajo y los baños para que su equipo se concentre en lo importante. Armamos una lista de tareas según el uso real de su espacio y la repetimos con la frecuencia que usted elija.",
                 "Cada plan empieza con una conversación sobre su distribución, horarios y prioridades. El alcance, la frecuencia y el precio quedan por escrito en la cotización, sin sorpresas."
@@ -69,7 +69,7 @@ SERVICES = [
             "tagline": "Cleanup after construction, so the space can open.",
             "meta_title": "Post-Construction Cleaning in the Midwest | ABC Midwest",
             "meta_desc": "Post-construction and renovation cleanup for commercial spaces in the Midwest. Request a free written quote and we reply within 1 business day.",
-            "img_alt": "Newly renovated commercial interior being cleaned after construction",
+            "img_alt": "Workers on a construction site seen from above",
             "summary": [
                 "After a build-out or renovation, fine dust settles on every surface. Post-construction cleaning removes debris and residue so the space can be inspected, furnished and opened.",
                 "The scope depends on the size and condition of the project. We review the details with you and put the stages, access needs and price in writing."
@@ -92,7 +92,7 @@ SERVICES = [
             "tagline": "Limpieza después de obras, para que el espacio pueda abrir.",
             "meta_title": "Limpieza post-construcción en el Medio Oeste | ABC Midwest",
             "meta_desc": "Limpieza posterior a obras y remodelaciones para espacios comerciales en el Medio Oeste. Cotización gratis por escrito en 1 día hábil.",
-            "img_alt": "Interior comercial recién remodelado durante la limpieza posterior a la obra",
+            "img_alt": "Trabajadores en una obra de construcción vistos desde arriba",
             "summary": [
                 "Después de una obra o remodelación, el polvo fino se deposita en todas las superficies. La limpieza post-construcción retira residuos y restos para que el espacio pueda inspeccionarse, amoblarse y abrir.",
                 "El alcance depende del tamaño y del estado del proyecto. Revisamos los detalles con usted y dejamos por escrito las etapas, los accesos necesarios y el precio."
@@ -120,7 +120,7 @@ SERVICES = [
             "tagline": "Machine cleaning and upkeep for commercial floors.",
             "meta_title": "Commercial Floor Care Services in the Midwest | ABC Midwest",
             "meta_desc": "Commercial floor care in the Midwest: machine scrubbing, buffing and periodic maintenance plans. Request a free quote; we reply in 1 business day.",
-            "img_alt": "Polished commercial floor in a bright lobby",
+            "img_alt": "Wide polished floor in an empty office corridor",
             "summary": [
                 "Floors take the most wear in any building and are the first thing visitors notice. Floor care goes beyond daily mopping, using equipment and methods suited to each surface.",
                 "We assess the flooring type and its condition, then recommend a plan, one-time or recurring, and write it into your quote."
@@ -143,7 +143,7 @@ SERVICES = [
             "tagline": "Limpieza con máquina y mantenimiento de pisos comerciales.",
             "meta_title": "Cuidado de pisos comerciales en el Medio Oeste | ABC Midwest",
             "meta_desc": "Cuidado de pisos comerciales en el Medio Oeste: lavado con máquina, pulido y planes de mantenimiento. Cotización gratis en 1 día hábil.",
-            "img_alt": "Piso comercial pulido en un vestíbulo luminoso",
+            "img_alt": "Piso pulido y amplio en un pasillo de oficina vacío",
             "summary": [
                 "Los pisos soportan el mayor desgaste de cualquier edificio y son lo primero que ven las visitas. El cuidado de pisos va más allá del trapeado diario, con equipos y métodos adecuados para cada superficie.",
                 "Evaluamos el tipo de piso y su estado, y le recomendamos un plan, puntual o recurrente, que dejamos por escrito en su cotización."
@@ -171,7 +171,7 @@ SERVICES = [
             "tagline": "Glass cleaning for storefronts and office buildings.",
             "meta_title": "Commercial Window Cleaning in the Midwest | ABC Midwest",
             "meta_desc": "Interior and exterior window cleaning for storefronts and offices in the Midwest. Free written quote with a reply within 1 business day.",
-            "img_alt": "Clean glass storefront and office windows reflecting daylight",
+            "img_alt": "Person wearing gloves and a mask cleaning a window",
             "summary": [
                 "Clean windows improve how a storefront or office looks from the street and how it feels inside. We clean glass, frames and sills on a one-time or recurring basis.",
                 "Access and height determine the method and the price, so we confirm those details with you and put the scope in writing."
@@ -194,7 +194,7 @@ SERVICES = [
             "tagline": "Limpieza de vidrios para locales y edificios de oficinas.",
             "meta_title": "Limpieza de ventanas comerciales en el Medio Oeste | ABC Midwest",
             "meta_desc": "Limpieza de ventanas interiores y exteriores para locales y oficinas en el Medio Oeste. Cotización gratis por escrito en 1 día hábil.",
-            "img_alt": "Vidrios de local y oficina limpios que reflejan la luz del día",
+            "img_alt": "Persona con guantes y mascarilla limpiando una ventana",
             "summary": [
                 "Las ventanas limpias mejoran cómo se ve un local u oficina desde la calle y cómo se siente por dentro. Limpiamos vidrios, marcos y repisas de forma puntual o recurrente.",
                 "El acceso y la altura determinan el método y el precio, por eso confirmamos esos detalles con usted y dejamos el alcance por escrito."
@@ -222,7 +222,7 @@ SERVICES = [
             "tagline": "Someone on site to keep shared areas in order during the day.",
             "meta_title": "Day Porter & On-Site Upkeep Services | ABC Midwest",
             "meta_desc": "Day porter service for buildings and facilities in the Midwest: restroom checks, lobby upkeep and more. Free quote, reply in 1 business day.",
-            "img_alt": "Clean building lobby with a reception area during the day",
+            "img_alt": "Gloved hand wiping a white surface with a spray bottle",
             "summary": [
                 "A day porter looks after high-traffic areas while the building is in use, handling the small things that cannot wait for the evening clean.",
                 "Coverage hours and tasks are tailored to your site and written into the quote, from a few hours a day to a full schedule."
@@ -245,7 +245,7 @@ SERVICES = [
             "tagline": "Una persona en sitio que mantiene las áreas comunes en orden durante el día.",
             "meta_title": "Mantenimiento diario en sitio y conserjería | ABC Midwest",
             "meta_desc": "Servicio de mantenimiento diario en edificios e instalaciones del Medio Oeste: baños, vestíbulos y más. Cotización gratis en 1 día hábil.",
-            "img_alt": "Vestíbulo de edificio limpio con área de recepción durante el día",
+            "img_alt": "Mano con guante limpiando una superficie blanca con un atomizador",
             "summary": [
                 "Un auxiliar de mantenimiento diario atiende las zonas de mayor tránsito mientras el edificio está en uso y resuelve lo que no puede esperar a la limpieza de la noche.",
                 "Las horas de cobertura y las tareas se adaptan a su sitio y quedan en la cotización, desde pocas horas al día hasta un horario completo."
@@ -270,7 +270,7 @@ UI = {
     "en": {
         "lang_name": "English", "lang_code": "EN", "html_lang": "en", "og_locale": "en_US",
         "home_h1": "Commercial cleaning for Midwest businesses",
-        "about_img_alt": "Cleaning team preparing a commercial space",
+        "about_img_alt": "Modern apartment building against a blue sky",
         "skip": "Skip to main content",
         "nav_home": "Home", "nav_services": "Services", "nav_about": "About", "nav_contact": "Contact",
         "menu": "Menu", "close": "Close", "all_services": "All services",
@@ -329,9 +329,9 @@ UI = {
         "home_meta_title": "Commercial Cleaning in the Midwest | ABC Midwest",
         "home_meta_desc": "Commercial cleaning for offices and facilities across the Midwest. English and Spanish service, free written quote within 1 business day.",
         "slides": [
-            ["Office cleaning on a schedule that suits you", "Recurring commercial cleaning across the Midwest. Tell us what the space needs and we put it in writing.", "hero-1", "Bright, tidy commercial office interior"],
-            ["Evenings, weekends or mid-day", "We plan the visit around when your building is quiet.", "hero-2", "Cleaning team member maintaining a commercial lobby floor"],
-            ["A written quote in one business day", "Send a few details. We reply with the scope and the price.", "hero-3", "Clean modern building exterior with glass windows"],
+            ["Office cleaning on a schedule that suits you", "Recurring commercial cleaning across the Midwest. Tell us what the space needs and we put it in writing.", "hero-1", "Glass-walled office corridor with polished floors"],
+            ["Evenings, weekends or mid-day", "We plan the visit around when your building is quiet.", "hero-2", "Open-plan office with rows of desks"],
+            ["A written quote in one business day", "Send a few details. We reply with the scope and the price.", "hero-3", "Office towers seen from street level"],
         ],
         "about_meta_title": "About ABC Midwest | Commercial Cleaning Company",
         "about_meta_desc": "Learn how ABC Midwest approaches commercial cleaning: clear communication, written plans and service in English and Spanish.",
@@ -386,7 +386,7 @@ UI = {
     "es": {
         "lang_name": "Español", "lang_code": "ES", "html_lang": "es", "og_locale": "es_US",
         "home_h1": "Limpieza comercial para empresas del Medio Oeste",
-        "about_img_alt": "Equipo de limpieza preparando un espacio comercial",
+        "about_img_alt": "Edificio moderno de apartamentos contra un cielo azul",
         "skip": "Saltar al contenido principal",
         "nav_home": "Inicio", "nav_services": "Servicios", "nav_about": "Nosotros", "nav_contact": "Contacto",
         "menu": "Menú", "close": "Cerrar", "all_services": "Todos los servicios",
@@ -445,9 +445,9 @@ UI = {
         "home_meta_title": "Limpieza comercial en el Medio Oeste | ABC Midwest",
         "home_meta_desc": "Limpieza comercial para oficinas e instalaciones en el Medio Oeste. Atención en español e inglés y cotización escrita gratis en 1 día hábil.",
         "slides": [
-            ["Limpieza de oficinas con el horario que le sirva", "Limpieza comercial recurrente en el Medio Oeste. Cuéntenos qué necesita el espacio y lo dejamos por escrito.", "hero-1", "Interior de oficina comercial luminoso y ordenado"],
-            ["Noches, fines de semana o a mediodía", "Planificamos la visita para cuando su edificio está tranquilo.", "hero-2", "Integrante del equipo de limpieza cuidando el piso de un vestíbulo comercial"],
-            ["Cotización escrita en un día hábil", "Envíenos unos datos. Respondemos con el alcance y el precio.", "hero-3", "Fachada moderna y limpia de un edificio con ventanales"],
+            ["Limpieza de oficinas con el horario que le sirva", "Limpieza comercial recurrente en el Medio Oeste. Cuéntenos qué necesita el espacio y lo dejamos por escrito.", "hero-1", "Pasillo de oficinas con paredes de vidrio y pisos pulidos"],
+            ["Noches, fines de semana o a mediodía", "Planificamos la visita para cuando su edificio está tranquilo.", "hero-2", "Oficina de planta abierta con filas de escritorios"],
+            ["Cotización escrita en un día hábil", "Envíenos unos datos. Respondemos con el alcance y el precio.", "hero-3", "Torres de oficinas vistas desde la calle"],
         ],
         "about_meta_title": "Nosotros | ABC Midwest, empresa de limpieza comercial",
         "about_meta_desc": "Conozca cómo trabaja ABC Midwest: comunicación clara, planes por escrito y atención en español e inglés.",

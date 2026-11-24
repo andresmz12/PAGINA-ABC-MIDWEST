@@ -101,7 +101,7 @@ def write_static_assets():
     shutil.copy(TOOLS / "assets_src" / "js" / "main.js", a / "js" / "main.js")
     fav = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="6" fill="%s"/>'
            '<text x="20" y="28" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="24" fill="#fff">A</text>'
-           '<rect x="9" y="33" width="22" height="2.5" fill="%s"/></svg>') % (c["primary"], "#E08A5F")
+           '<rect x="9" y="33" width="22" height="2.5" fill="%s"/></svg>') % (c["primary"], "#6FD3A0")
     (a / "favicon.svg").write_text(fav, encoding="utf-8")
 
 
@@ -232,7 +232,7 @@ def head(lang, key, title, desc, p, alt_paths, ld, sid=None):
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{asset_url('css/theme.css')}">
 <link rel="stylesheet" href="{asset_url('css/styles.css')}">
 {jsonld(ld)}
@@ -351,17 +351,16 @@ def faq_list(items):
 
 
 def service_cards(lang, exclude=None):
-    rows = []
-    n = 0
+    t = UI[lang]
+    out = []
     for s in SERVICES:
         if s["id"] == exclude:
             continue
-        n += 1
         d = s[lang]
-        rows.append(f"""<li class="svc-row reveal"><span class="svc-n">{n:02d}</span>
-<h3><a class="stretched" href="{path('service', lang, s['id'])}">{esc(d['name'])}</a></h3>
-<p>{esc(d['short'])}</p><span class="svc-go" aria-hidden="true">{ICON['arrow']}</span></li>""")
-    return '<ol class="svc-list">' + "".join(rows) + "</ol>"
+        out.append(f"""<li class="svc-card reveal"><img src="/assets/img/{s['img']}.jpg" alt="{esc(d['img_alt'])}" width="1400" height="933" loading="lazy" decoding="async">
+<div class="svc-body"><h3><a class="stretched" href="{path('service', lang, s['id'])}">{esc(d['name'])}</a></h3>
+<p>{esc(d['short'])}</p><span class="svc-go">{esc(t['learn_more'])}{ICON['arrow']}</span></div></li>""")
+    return '<ul class="svc-grid">' + "".join(out) + "</ul>"
 
 
 def steps(items):
@@ -411,19 +410,16 @@ def build_home(lang):
 </section>"""
     facts = '<section class="facts dark"><div class="container facts-grid">' + "".join(
         f'<div class="fact reveal"><strong>{esc(a)}</strong><span>{esc(b)}</span></div>' for a, b in t["facts"]) + "</div></section>"
-    services = f"""<section class="section"><div class="container"><div class="sec-head reveal"><p class="eyebrow">{esc(t['services_eyebrow'])}</p>
-<h2>{esc(t['services_title'])}</h2><p class="lead">{esc(t['services_lead'])}</p></div>{service_cards(lang)}</div></section>"""
-    process = f"""<section class="section dark"><div class="container"><div class="sec-head reveal"><p class="eyebrow">{esc(t['process_eyebrow'])}</p>
-<h2>{esc(t['process_title'])}</h2></div>{steps(t['process'])}</div></section>"""
+    services = f"""<section class="section"><div class="container"><div class="sec-head reveal"><h2>{esc(t['services_title'])}</h2><p class="lead">{esc(t['services_lead'])}</p></div>{service_cards(lang)}</div></section>"""
+    process = f"""<section class="section dark"><div class="container"><div class="sec-head reveal"><h2>{esc(t['process_title'])}</h2></div>{steps(t['process'])}</div></section>"""
     about = f"""<section class="section gray"><div class="container split">
 <div class="split-img reveal"><img src="/assets/img/about.jpg" alt="{esc(t['about_img_alt'])}" width="1100" height="1300" loading="lazy" decoding="async"></div>
-<div class="split-copy reveal"><p class="eyebrow">{esc(t['about_eyebrow'])}</p><h2>{esc(t['about_title'])}</h2>
+<div class="split-copy reveal"><h2>{esc(t['about_title'])}</h2>
 {''.join(f'<p>{esc(x)}</p>' for x in t['about_text'])}
 <h3 class="mini">{esc(t['areas_title'])}</h3>{areas_list(lang)}
 <a class="btn btn-primary" href="{path('about', lang)}">{esc(t['about_cta'])}</a></div></div></section>"""
     faqs = t["faq_home"]
-    faq = f"""<section class="section"><div class="container narrow"><div class="sec-head reveal"><p class="eyebrow">{esc(t['faq_eyebrow'])}</p>
-<h2>{esc(t['faq_title'])}</h2></div>{faq_list(faqs)}</div></section>"""
+    faq = f"""<section class="section"><div class="container narrow"><div class="sec-head reveal"><h2>{esc(t['faq_title'])}</h2></div>{faq_list(faqs)}</div></section>"""
     body = hero + facts + services + process + about + faq + cta_banner(lang)
     ld = [business_node(lang), website_node(lang), faq_node(faqs)]
     page(lang, "home", t["home_meta_title"], t["home_meta_desc"], body, ld, alt)
@@ -442,8 +438,7 @@ def build_services_index(lang):
     crumbs = [(t["nav_home"], path("home", lang)), (t["nav_services"], None)]
     body = hero_simple(lang, crumbs, t["services_page_h1"], t["services_page_lead"])
     body += f'<section class="section"><div class="container">{service_cards(lang)}</div></section>'
-    body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><p class="eyebrow">{esc(t['process_eyebrow'])}</p>
-<h2>{esc(t['process_title'])}</h2></div>{steps(t['process'])}</div></section>""" + cta_banner(lang)
+    body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><h2>{esc(t['process_title'])}</h2></div>{steps(t['process'])}</div></section>""" + cta_banner(lang)
     ld = [breadcrumb_node([(t["nav_home"], path("home", lang)), (t["nav_services"], path("services", lang))])]
     page(lang, "services", t["services_meta_title"], t["services_meta_desc"], body.replace('class="section gray"', 'class="section gray"'), ld, alt)
 
@@ -467,8 +462,7 @@ def build_service(lang, svc):
                     for a, b in d["includes"])
     body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><h2>{esc(t['includes_title'])}</h2>
 <p class="lead">{esc(t['includes_lead'])}</p></div><div class="grid grid-4">{cards}</div></div></section>"""
-    body += f"""<section class="section dark"><div class="container"><div class="sec-head reveal"><p class="eyebrow">{esc(t['process_eyebrow'])}</p>
-<h2>{esc(t['process_service_title'])}</h2></div>{steps(t['process'])}</div></section>"""
+    body += f"""<section class="section dark"><div class="container"><div class="sec-head reveal"><h2>{esc(t['process_service_title'])}</h2></div>{steps(t['process'])}</div></section>"""
     body += f"""<section class="section"><div class="container faq-wrap"><div><div class="sec-head reveal"><h2>{esc(t['faq_service_title'])}</h2></div>
 {faq_list(d['faqs'])}</div>{quote_card(lang, sid)}</div></section>"""
     body += f"""<section class="section gray"><div class="container"><div class="sec-head reveal"><h2>{esc(t['other_services'])}</h2></div>
